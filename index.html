@@ -223,32 +223,44 @@
       <!-- Visual Effects. -->
       <div class="column">
         <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
+          <h2 class="title is-3">DTST Overview</h2>
           <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
+            The framework incorporates N Token Selection VDT blocks, 
+            where each block consists of an encoder layer and a visual token selector. 
+            The loss function is designed to account for both view-related and view-unrelated features, 
+            while an orthogonal loss ensures that these features remain independent from each other, 
+            further enhancing feature disentanglement and robustness.
           </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+          <picture>
+            <source srcset="./static/images/sub_overview.png" type="image/png">
+            <img src="./static/images/sub_overview.png" alt="DTST Overview" style="width: 100%;"/>
+          </picture>
+          <!-- <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
             <source src="./static/videos/dollyzoom-stacked.mp4"
                     type="video/mp4">
-          </video>
+          </video> -->
         </div>
       </div>
       <!--/ Visual Effects. -->
 
       <!-- Matting. -->
       <div class="column">
-        <h2 class="title is-3">Matting</h2>
+        <h2 class="title is-3">Visual Token Selector</h2>
         <div class="columns is-centered">
           <div class="column content">
             <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
+              Designed to dynamically refine the token representation 
+              by selecting the most informative tokens for subsequent analysis. 
+              This module aims to reduce redundancy and enhance the model's ability to focus on critical regions, 
+              thereby optimizing computational efficiency while preserving feature quality.
             </p>
-            <video id="matting-video" controls playsinline height="100%">
+            <!-- <video id="matting-video" controls playsinline height="100%">
               <source src="./static/videos/matting.mp4"
                       type="video/mp4">
-            </video>
+            </video> -->
+            <picture>
+              <source srcset="./static/images/VTS.png" type="image/png">
+              <img src="./static/images/VTS.png" alt="Visual Token Selector" style="width: 100%;"/>
           </div>
 
         </div>
