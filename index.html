@@ -199,6 +199,17 @@
       </div>
     </div>
     <!--/ Abstract. -->
+  <!-- Paper video. -->
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-four-fifths">
+      <h2 class="title is-3">Video</h2>
+      <div class="publication-video">
+        <iframe src="https://youtu.be/hYg_d6rCAJs&amp;showinfo=0"
+                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+  <!--/ Paper video. -->
 
   </div>
 </section>
@@ -211,12 +222,12 @@
         <h2 class="title is-3">Approch</h2>
         <div class="content has-text-justified">
           <p>
-            We propose the Dynamic Token Selective Transformer (DTST) based on the View-Decoupled Transformer (VDT) to tackle the view discrepancy challenge in AGPReID. 
+            We propose the Dynamic Token Selective Transformer <b>(DTST)</b> based on the View-Decoupled Transformer (VDT) to tackle the view discrepancy challenge in AGPReID. 
             Input images that include both aerial and ground views are tokenized into a sequence of tokens. 
             To encompass both global and view-specific details, meta tokens and view tokens are added to these image tokens before they are inputted into the VDT.
           </p>
           <p>
-            We also introduce the Visual Token Selector (VTS) to each VDT blocks, 
+            We also introduce the Visual Token Selector <b>(VTS)</b> to each VDT blocks, 
             designed to dynamically refine the token representation by selecting the most informative tokens 
             for subsequent analysis. This module aims to reduce redundancy and enhance the model's ability 
             to focus on critical regions, thereby optimizing computational efficiency while preserving feature 
@@ -265,7 +276,7 @@
 
       <!-- Matting. -->
       <div class="column">
-        <h3 class="title is-4">Visual Token Selector</h3>
+        <h3 class="title is-4">VTS Overview</h3>
         
         <div class="columns is-centered">
           <div class="column content">
@@ -298,12 +309,29 @@
 <section class="section">
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <h2 class="title is-3">Result of CARGO</h2>
+
+          <h2 class="title is-3">Experiments</h2>
+          <p>
+            We evaluate the proposed DTST on three benchmark datasets: CARGO, AG-ReID.
+          </p>
+          <p>
+            The results demonstrate that our method outperforms existing works in terms of mAP and rank-1 accuracy.
+          </p>
+          <!-- a blank line -->
+          <br>
+          <h3 class="title is-4">1. CARGO Result</h3>
           <picture>
             <source srcset="./static/images/main_result.png" type="image/png">
             <img src="./static/images/main_result.png" alt="main_result" style="width: 70%;"/>
           </picture>
-        </div>
+          <br>
+          <h3 class="title is-4">2. AG-ReID Result</h3>
+          <picture>
+            <source srcset="./static/images/AG_Result.png" type="image/png">
+            <img src="./static/images/AG_Result.png" alt="AG_Result" style="width: 40%;"/>
+          </picture>
+
+        
       </div>
 </section>
 
